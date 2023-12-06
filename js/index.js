@@ -28,10 +28,10 @@ fetch("https://striveschool-api.herokuapp.com/books")
 			const title = libro.title;
 			const mainContainer = document.getElementById("mainContainer");
 			const nuovaCard = document.createElement("div");
-			nuovaCard.classList.add("col-4", "col-md-3");
+			nuovaCard.classList.add("card-group", "col-4", "col-md-3");
 			nuovaCard.innerHTML = `
             
-            <div class="card">
+            <div class="card mb-3">
             <img src="${copertina}" class="card-img-top" alt="copertina ${title}" />
             <div class="card-body">
                 <h5 class="card-title">${title}</h5>
@@ -40,7 +40,7 @@ fetch("https://striveschool-api.herokuapp.com/books")
                     Some quick example text to build on the card title and make up the bulk of
                     the card's content.
                 </p>
-                <a href="#" class="btn btn-success">Compra ora a ${price}€</a>
+                <a href="#" class="btn btn-success compra-button">Compra ora a ${price}€</a>
                 <a href="#" class="btn btn-danger">Scarta</a>
             </div>
         </div>`;
@@ -54,7 +54,7 @@ fetch("https://striveschool-api.herokuapp.com/books")
 			});
 		});
 		// --------------------------------------
-		const buyButtons = document.querySelectorAll(".btn-success");
+		const buyButtons = document.querySelectorAll(".compra-button");
 		buyButtons.forEach((element) => {
 			element.addEventListener("click", compra);
 		});
@@ -63,5 +63,5 @@ fetch("https://striveschool-api.herokuapp.com/books")
 	.catch((error) => console.log(error));
 
 function compra() {
-	console.log("ciao");
+	console.log(this);
 }
