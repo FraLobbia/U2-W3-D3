@@ -45,7 +45,7 @@ fetch("https://striveschool-api.herokuapp.com/books")
                 </div>
 
                 <div>
-                <a href="#" class="btn btn-success compra-button">Compra ora a ${price}€</a>
+                <a href="#" class="btn btn-dark compra-button" onclick="compra('${title}','${price}')">Compra ora a ${price}€</a>
                 <a href="#" class="btn btn-danger">Scarta</a>
                 </div>
 
@@ -57,18 +57,22 @@ fetch("https://striveschool-api.herokuapp.com/books")
 		// --------------------------------------
 		scartaButtons.forEach((element) => {
 			element.addEventListener("click", () => {
-				element.parentElement.parentElement.parentElement.remove();
+				element.parentElement.parentElement.parentElement.parentElement.remove();
 			});
 		});
-		// --------------------------------------
-		const buyButtons = document.querySelectorAll(".compra-button");
-		buyButtons.forEach((element) => {
-			element.addEventListener("click", compra);
-		});
-		// --------------------------------------
 	})
 	.catch((error) => console.log(error));
 
-function compra() {
-	console.log(this);
+function compra(titolo, prezzo) {
+	const cart = document.getElementById("cart");
+	const div = document.createElement("div");
+	div.classList.add("d-flex", "justify-content-between");
+	const icona = document.createElement("i");
+	icona.classList.add("bi", "bi-x-square-fill", "fs-2", "ms-1");
+	icona.addEventListener("click", () => {
+		icona.parentElement.remove();
+	});
+	div.innerHTML = titolo + `<p>prezzo: ${prezzo}€</p>`;
+	div.appendChild(icona);
+	cart.appendChild(div);
 }

@@ -15,20 +15,20 @@
 		<title>Esercizio U2-W3-D3</title>
 	</head>
 	<body class="bg-warning">
-		<div class="text-end m-3">
+		<div class="text-end m-3 fixed-top">
 			<button
-				class="btn btn-success"
+				class="btn btn-success px-5"
 				type="button"
 				data-bs-toggle="offcanvas"
 				data-bs-target="#offcanvasRight"
 				aria-controls="offcanvasRight"
 			>
-				Carrello
+				<i class="bi bi-cart4 fs-2"></i>
 			</button>
 		</div>
 
 		<div
-			class="offcanvas offcanvas-end"
+			class="offcanvas offcanvas-end bg-warning"
 			tabindex="-1"
 			id="offcanvasRight"
 			aria-labelledby="offcanvasRightLabel"
@@ -37,12 +37,14 @@
 				<h5 id="offcanvasRightLabel">Carrello</h5>
 				<button
 					type="button"
-					class="btn-close text-reset"
+					class="btn-close text-reset bg-danger"
 					data-bs-dismiss="offcanvas"
 					aria-label="Close"
 				></button>
 			</div>
-			<div class="offcanvas-body">...</div>
+			<div class="offcanvas-body" id="cart">
+				<!-- qui vado a mettere i libri comprati -->
+			</div>
 		</div>
 		<h1 class="text-center mb-4">Esercizio U2-W3-D3</h1>
 		<div class="container">
@@ -64,7 +66,11 @@
 				pulsante per rimuoverlo dal carrello
 			</p>
 		</div>
-		<div class="container-fluid row" id="mainContainer"></div>
+		<div class="container">
+			<div class="row" id="mainContainer">
+				<!-- qui e dove con js vanno a mettere roba -->
+			</div>
+		</div>
 
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
