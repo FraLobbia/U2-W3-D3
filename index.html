@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="css/index.css" />
+
+		<title>Esercizio U2-W3-D3</title>
+	</head>
+	<body class="bg-warning">
+		<h1 class="text-center mb-4">Esercizio U2-W3-D3</h1>
+		<div class="container">
+			<p>
+				Devi realizzare una pagina per una “libreria” contenenente libri
+				derivanti da una chiamata HTTP di tipo GET. Endpoint:
+				https://striveschool-api.herokuapp.com/books Requisiti della pagina:
+				<br />●Utilizza Bootstrap 5 per creare una pagina responsive con una
+				sezione centrale a 3 o 4 colonne per riga <br />●Ogni colonna avrà al
+				suo interno un elemento Card di Bootstrap, creata a partire da un
+				singolo libro: nella “card image” inserisci la copertina del libro, nel
+				“card body” il suo titolo e il suo prezzo. <br />●Sempre nel “card body”
+				inserisci un pulsante “Scarta”. Se premuto, dovrà far scomparire la card
+				dalla pagina. <br />●EXTRA: crea una lista che rappresenti il carrello
+				del negozio e inseriscila dove vuoi nella pagina. Aggiungi un altro
+				pulsante “Compra ora” vicino a “Scarta” nelle card per aggiungere il
+				libro al carrello. Il carrello dovrà persistere nello storage del
+				browser. <br />●EXTRA: aggiungi vicino ad ogni libro del carrello un
+				pulsante per rimuoverlo dal carrello
+			</p>
+		</div>
+		<div class="container-fluid row" id="mainContainer"></div>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>
