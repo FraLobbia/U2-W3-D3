@@ -33,15 +33,22 @@ fetch("https://striveschool-api.herokuapp.com/books")
             
             <div class="card mb-3">
             <img src="${copertina}" class="card-img-top" alt="copertina ${title}" />
-            <div class="card-body">
+            <div class="card-body d-flex flex-column justify-content-between">
+
+                <div>
                 <h5 class="card-title">${title}</h5>
                 <span class="text-muted"">Prezzo: ${price}€</span>
                 <p class="card-text">
                     Some quick example text to build on the card title and make up the bulk of
                     the card's content.
                 </p>
+                </div>
+
+                <div>
                 <a href="#" class="btn btn-success compra-button">Compra ora a ${price}€</a>
                 <a href="#" class="btn btn-danger">Scarta</a>
+                </div>
+
             </div>
         </div>`;
 			mainContainer.appendChild(nuovaCard);
